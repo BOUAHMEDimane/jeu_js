@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Région Auvergne Rhône Alpes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <figure>
+    <img src="regionAURA.png">
+    <h1 style="left:180px;top:110px;">Allier</h1>
+    <h2 style="left:240px;top:80px;">Moulins</h2>
+    <h1 style="left:150px;top:250px">Puy-de-Dôme</h1>
+    <h2 style="left:120px;top:310px">Clermont-Ferrand</h2>
+    <h1 style="left:85px;top:460px">Cantal</h1>
+    <h2 style="left:40px;top:570px">Aurillac</h2>
+    <h1 style="left:400px;top:310px">Loire</h1>
+    <h2 style="left:440px;top:420px">Saint-Etienne</h2>
+    <h1 style="left:310px;top:450px">Haute-Loire</h1>
+    <h2 style="left:300px;top:550px">Le Puy-en-Velay</h2>
+    <h1 style="left:490px;top:240px">Rhône</h1>
+    <h2 style="left:570px;top:300px">Lyon</h2>
+    <h1 style="left:660px;top:220px">Ain</h1>
+    <h2 style="left:580px;top:180px">Bourg-en-Bresse</h2>
+    <h1 style="left:660px;top:390px">Isère</h1>
+    <h2 style="left:740px;top:490px">Grenoble</h2>
+    <h1 style="left:440px;top:650px">Ardèche</h1>
+    <h2 style="left:490px;top:620px">Privas</h2>
+    <h1 style="left:630px;top:630px">Drôme</h1>
+    <h2 style="left:570px;top:580px">Valence</h2>
+    <h1 style="left:930px;top:380px">Savoie</h1>
+    <h2 style="left:760px;top:360px">Chambéry</h2>
+    <h1 style="left:840px;top:180px">Haute-Savoie</h1>
+    <h2 style="left:810px;top:270px">Annecy</h2>
+  </figure>
+  <section>
+    <p>
+      Le jeu consiste à associer un département à sa
+      préfecture. Il faut choisir un département ci-dessous,
+      puis cliquer sur la ville qui lui correspond, et ensuite
+      valider votre choix.
+    </p>
+    <ul>
+      <li>Ain</li>
+      <li>Allier</li>
+      <li>Ardèche</li>
+      <li>Cantal</li>
+      <li>Drôme</li>
+      <li>Haute-Loire</li>
+      <li>Haute-Savoie</li>
+      <li>Isère</li>
+      <li>Loire</li>
+      <li>Puy-de-Dôme</li>
+      <li>Rhône</li>
+      <li>Savoie</li>
+    </ul>
+    <button type="button" name="start">Démarrer le jeu</button>
+    <button type="button" name="valid">Valider la sélection</button>
+    <button type="button" name="end">Terminer le jeu</button>
+    <article>
+      <p>C'est terminé !</p>
+      <p>Vous avez trouvé <output name="nbSuccess"></output> couples corrects
+        sur <output name="nbToFind"></output> qu'il fallait trouver.
+      </p>
+      <p>
+        Vous avez fait au total <output name="nbTry"></output> essais.
+      </p>
+    </article>
+  </section>
+  <script src="model.js"></script>
+  <script src="view.js"></script>
+  <script src="controler.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+html {
+  /* Template des couleurs */
+  --main-color: #CCFF99;
+  --button-up-color: #4CAF50;
+  --button-down-color: #3C9F40;
+
+}
+
+/* Fonts pour tout le site */
+body {
+  font-family: sans-serif;
+  margin: 0px;
+}
+
+figure {
+  display: inline-block;
+  margin: 0px;
+}
+
+/* Pour pouvoir placer les noms de dÃ©partement et de villes dessus */
+figure>img {
+  position: relative;
+}
+
+/* Le nom de la rÃ©gion en blanc avec une ombre noire */
+figure h1 {
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Le nom de la ville */
+figure h2 {
+  position: absolute;
+  font-size: 1.3em;
+}
+
+/* Change le curseur pour indiquer qu'on peut cliquer dessus */
+figure h2:hover {
+  cursor: pointer;
+}
+
+/* Positionne un carrÃ© vert au dessus du nom de la ville */
+figure h2::before {
+  content:"";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -30px;
+  left: 40%;
+  background: green;
+}
+
+/* Change la couleur du carrÃ© au dessus de la ville */
+figure h2.selected::before {
+  background: red;
+}
+
+
+body {
+  display: flex;
+}
+
+/* Mise en forme de la liste des choix de dÃ©partments */
+section li {
+  list-style-type:none;
+  position: relative;
+  margin: 1px;
+  padding: 0.5em 0.5em 0.5em 2em;
+  background: lightgrey;
+  font-family: sans-serif;
+}
+
+/* Change le curseur pour indiquer qu'on peut cliquer dessus */
+section li:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Etat selectionnÃ© */
+section li.selected {
+    background: var(--main-color);
+}
+
+/* Design de l'affiche des rÃ©sultats */
+section article {
+  background-color: var(--main-color);
+  margin: 2em;
+  padding: 2em;
+  box-shadow:10px 5px 5px lightgrey;
+  visibility: hidden;
+}
+
+/* Design des boutons */
+button {
+  background: var(--button-up-color);
+  font-size: 1.1em;
+  color: white;
+  padding: 0.6em;
+  border-style: none;
+  box-shadow:10px 5px 5px lightgrey;
+  border-radius: 6px;
+}
+
+button:hover {
+  background: var(--button-down-color);
+}
+
+button:active {
+  background: var(--button-down-color);
+  transform: translateY(2px);
+}
